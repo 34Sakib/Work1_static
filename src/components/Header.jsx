@@ -17,7 +17,7 @@ export default function Header({ darkMode, setDarkMode }) {
         {/* Brand Logo */}
         <a href="#" className="flex items-center gap-3 font-serif text-2xl font-bold tracking-tight text-accent transition-colors duration-300 hover:opacity-85" id="nav-brand">
           <img
-            src="https://lh3.googleusercontent.com/d/11jfriYd3RdAPYSqebpL-nDsPbuWX3XYL"
+            src="https://lh3.googleusercontent.com/d/1dtUlwfWqrPmcYge6cG8aZwGsMK3IByKI"
             alt="Nodee Shankar Logo"
             className="h-8 w-auto object-contain transition-all duration-300"
             id="header-logo"

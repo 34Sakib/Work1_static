@@ -27,7 +27,7 @@ export default function Contact() {
     subject: '',
     message: ''
   });
-  
+
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
@@ -37,14 +37,14 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Construct mailto link dynamically for static site submission
     const mailtoLink = `mailto:shankarnodee@gmail.com?subject=${encodeURIComponent(
       formData.subject || 'Portfolio Inquiry'
     )}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )}`;
-    
+
     // Open in browser
     window.location.href = mailtoLink;
     setSubmitted(true);
@@ -54,7 +54,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 md:py-28 border-b border-border-base bg-surface-secondary/10 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-6">
-        
+
         {/* Section Title */}
         <div className="text-center space-y-2 mb-16">
           <span className="text-xs uppercase tracking-widest text-accent font-semibold font-sans">
@@ -67,7 +67,7 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start text-left">
-          
+
           {/* Coordinates Column */}
           <div className="md:col-span-5 space-y-8">
             <div className="space-y-4">
@@ -138,7 +138,7 @@ export default function Contact() {
           {/* Form Column */}
           <div className="md:col-span-7 bg-surface border border-border-base p-6 md:p-8 rounded shadow-sm">
             <form onSubmit={handleSubmit} className="space-y-5" aria-label="Contact Form">
-              
+
               {/* Name field */}
               <div className="space-y-1.5">
                 <label htmlFor="form-name" className="text-xs font-semibold uppercase tracking-wider text-primary font-sans">
@@ -152,7 +152,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-2.5 border border-border-base rounded bg-background text-primary font-sans focus:outline-none focus:border-accent text-sm"
-                  placeholder="Jane Doe"
+                  placeholder="Your Name"
                 />
               </div>
 
@@ -169,7 +169,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-2.5 border border-border-base rounded bg-background text-primary font-sans focus:outline-none focus:border-accent text-sm"
-                  placeholder="jane.doe@example.com"
+                  placeholder="Your.name@example.com"
                 />
               </div>
 
